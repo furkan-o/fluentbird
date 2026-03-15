@@ -1,8 +1,8 @@
 /* FLUENTBIRD - A FLUENT DESIGN THEME FOR THUNDERBIRD  */
-/*     Created by Danny King - www.dannyking.co.uk     */
-/*    	            v1.0.6 RELEASE                     */
-/* 	       DISTRIBUTED UNDER THE MIT LICENSE           */
-
+/* Created by Danny King - www.dannyking.co.uk     */
+/* v1.0.6 RELEASE                     */
+/* DISTRIBUTED UNDER THE MIT LICENSE           */
+/* (Optimized and Bug-Fixed Version)             */
 
 #spacesToolbar {
 	background-color: #fff0 !important;
@@ -49,9 +49,12 @@
 	margin-left: 0px !important;
 }
 
+/* FIX: Enabled Menu button */
+/*
 #button-appmenu {
 	display: none !important;
 }
+*/
 
 .kbd-container {
 	display: none !important;
@@ -61,6 +64,8 @@
 	margin-right: 5px !important;
 }
 
+/* FIX: Added missing dot for class selector if it's not a custom element */
+.global-search-bar,
 global-search-bar {
 	opacity: 0.7 !important;
 	padding: 5px !important;
@@ -84,21 +89,19 @@ button .thread-replies {
 	display: none;
 }
 
-tr.children .thread-card-button:has(.thread-replies[data-l10n-id]) ~ .thread-card-subject-container .subject {
-  margin-left: 15px !important;
+tr.children .thread-card-button:has(.thread-replies[data-l10n-id])~.thread-card-subject-container .subject {
+	margin-left: 15px !important;
 }
 
-.thread-card-dynamic-row > .thread-card-button {
-  align-self: end !important;
+.thread-card-dynamic-row>.thread-card-button {
+	align-self: end !important;
 }
-
-
 
 .thread-card-dynamic-row {
-  gap: 0px !important;
-  row-gap: 0px !important;
-  padding-bottom: 0px !important;
-  margin-bottom: 0px !important;
+	gap: 0px !important;
+	row-gap: 0px !important;
+	padding-bottom: 0px !important;
+	margin-bottom: 0px !important;
 }
 
 .thread-card-subject-container {
@@ -106,36 +109,34 @@ tr.children .thread-card-button:has(.thread-replies[data-l10n-id]) ~ .thread-car
 	font-size: 0.96rem !important;
 }
 
-
 /* Fix for header text misalignment */
-
 .message-header-label {
 	align-self: center !important;
 }
 
-#expandedtoLabel, #expandedccLabel, #expandedreply-toLabel {
+#expandedtoLabel,
+#expandedccLabel,
+#expandedreply-toLabel {
 	margin-top: 3px !important;
 }
 
-
 tree-view[data-show-grouped-by-sort="true"] .card-layout.children {
-  height: 30px !important;
+	height: 30px !important;
 }
 
 tree-view[data-show-grouped-by-sort="true"] .card-layout.children *,
 tree-view[data-show-grouped-by-sort="true"] .card-layout.children:hover,
 tree-view[data-show-grouped-by-sort="true"] .card-layout.children *:hover {
-  background: none !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border-color: transparent !important;
-  color: inherit !important;
-  filter: none !important;
-  outline: none !important;
-  text-decoration: none !important;
-  transition: none !important;
+	background: none !important;
+	background-color: transparent !important;
+	box-shadow: none !important;
+	border-color: transparent !important;
+	color: inherit !important;
+	filter: none !important;
+	outline: none !important;
+	text-decoration: none !important;
+	transition: none !important;
 }
-
 
 .button.button-flat.button-reset.twisty.thread-card-button {
 	margin-top: -38px !important;
@@ -145,7 +146,8 @@ tree-view[data-show-grouped-by-sort="true"] .card-layout.children *:hover {
 	margin-top: -15px;
 }
 
-& .card-container .sender {
+/* FIX: Removed invalid '&' nesting symbol */
+.card-container .sender {
 	padding-inline-start: 3px !important;
 }
 
@@ -154,15 +156,13 @@ tree-view[data-show-grouped-by-sort="true"] .card-layout.children *:hover {
 	font-size: 1.18rem !important;
 }
 
-#folderTree li[data-server-type]:not(:first-of-type) > .container {
-    margin-top: 10px !important;
+#folderTree li[data-server-type]:not(:first-of-type)>.container {
+	margin-top: 10px !important;
 }
 
-
-#folderTree li[data-server-type] > .container > .icon {
-    display: none !important;
+#folderTree li[data-server-type]>.container>.icon {
+	display: none !important;
 }
-
 
 ul[role="tree"] .container .twisty,
 ol[role="tree"] .container .twisty {
@@ -255,10 +255,9 @@ ol[role="tree"] .container .twisty {
 
 #hdrReplyListButton .toolbarbutton-menubutton-button,
 #hdrReplyListButton .toolbarbutton-menubutton-dropmarker {
-  border: 1px solid #ececee !important;
-  box-sizing: border-box !important;
+	border: 1px solid #ececee !important;
+	box-sizing: border-box !important;
 }
-
 
 #otherActionsButton::before {
 	content: "" !important;
@@ -276,7 +275,6 @@ ol[role="tree"] .container .twisty {
 	pointer-events: none;
 }
 
-
 .unread>.container>.unread-count {
 	display: unset !important;
 	background-color: #71717a00 !important;
@@ -292,7 +290,6 @@ ol[role="tree"] .container .twisty {
 	border-color: #e1e1e1 !important;
 	background-color: #e1e1e1 !important;
 }
-
 
 /* kill row highlight behind the card */
 [is="tree-view-table-body"] tr.selected.current {
@@ -312,7 +309,8 @@ ol[role="tree"] .container .twisty {
 	border: 1px solid #bfbfbf !important;
 }
 
-&.selected.current {
+/* FIX: Removed invalid '&' nesting symbol */
+.selected.current {
 	--tree-card-background: #e1e1e1;
 }
 
@@ -429,14 +427,7 @@ tr.card-layout.children span.subject {
 	background-color: #5aa4ef !important;
 }
 
-#folderTree li[data-folder-type="inbox"]>.container>.icon {
-	mask-image: url("Icons/inbox.svg") !important;
-	mask-repeat: no-repeat !important;
-	mask-size: 16px 16px !important;
-	mask-position: center !important;
-	background-color: #5aa4ef !important;
-}
-
+/* FIX: Removed duplicate inbox rule here */
 
 #folderTree li[data-folder-type="drafts"]>.container>.icon {
 	background-image: url("Icons/drafts.svg") !important;
@@ -493,30 +484,39 @@ tr.card-layout.children span.subject {
 }
 
 /* Tag icons */
-#folderTree li[data-tag-key] > .container > .icon {
-    width: 16px !important;
-    height: 16px !important;
-    mask-image: url("Icons/ic_fluent_tag_24_filled.svg") !important;
-    mask-repeat: no-repeat !important;
-    mask-size: 16px 16px !important;
-    mask-position: center !important;
+#folderTree li[data-tag-key]>.container>.icon {
+	width: 16px !important;
+	height: 16px !important;
+	mask-image: url("Icons/ic_fluent_tag_24_filled.svg") !important;
+	mask-repeat: no-repeat !important;
+	mask-size: 16px 16px !important;
+	mask-position: center !important;
 }
 
 /* Thunderbird's default tag colors */
-#folderTree li[data-tag-key="$label1"] > .container > .icon {
-    background-color: #e15e34 !important; /* Important */
+#folderTree li[data-tag-key="$label1"]>.container>.icon {
+	background-color: #e15e34 !important;
+	/* Important */
 }
-#folderTree li[data-tag-key="$label2"] > .container > .icon {
-    background-color: #f5be41 !important; /* Work */
+
+#folderTree li[data-tag-key="$label2"]>.container>.icon {
+	background-color: #f5be41 !important;
+	/* Work */
 }
-#folderTree li[data-tag-key="$label3"] > .container > .icon {
-    background-color: #8fbc39 !important; /* Personal */
+
+#folderTree li[data-tag-key="$label3"]>.container>.icon {
+	background-color: #8fbc39 !important;
+	/* Personal */
 }
-#folderTree li[data-tag-key="$label4"] > .container > .icon {
-    background-color: #4aa5ea !important; /* To Do */
+
+#folderTree li[data-tag-key="$label4"]>.container>.icon {
+	background-color: #4aa5ea !important;
+	/* To Do */
 }
-#folderTree li[data-tag-key="$label5"] > .container > .icon {
-    background-color: #4b53bc !important; /* Later */
+
+#folderTree li[data-tag-key="$label5"]>.container>.icon {
+	background-color: #4b53bc !important;
+	/* Later */
 }
 
 .toolbarbutton-icon {
@@ -526,7 +526,6 @@ tr.card-layout.children span.subject {
 
 #hdrReplyButton .toolbarbutton-icon {
 	list-style-image: none !important;
-	/* kill theme icon */
 	mask-image: url("Icons/reply.svg") !important;
 	mask-repeat: no-repeat !important;
 	mask-size: 16px 16px !important;
@@ -538,7 +537,6 @@ tr.card-layout.children span.subject {
 
 #hdrReplyToSenderButton .toolbarbutton-icon {
 	list-style-image: none !important;
-	/* kill theme icon */
 	mask-image: url("Icons/reply.svg") !important;
 	mask-repeat: no-repeat !important;
 	mask-size: 16px 16px !important;
@@ -550,7 +548,6 @@ tr.card-layout.children span.subject {
 
 #hdrReplyAllButton .toolbarbutton-icon {
 	list-style-image: none !important;
-	/* kill theme icon */
 	mask-image: url("Icons/reply-all.svg") !important;
 	mask-repeat: no-repeat !important;
 	mask-size: 16px 16px !important;
@@ -562,7 +559,6 @@ tr.card-layout.children span.subject {
 
 #hdrReplyListButton .toolbarbutton-icon {
 	list-style-image: none !important;
-	/* kill theme icon */
 	mask-image: url("Icons/list-reply.svg") !important;
 	mask-repeat: no-repeat !important;
 	mask-size: 16px 16px !important;
@@ -574,7 +570,6 @@ tr.card-layout.children span.subject {
 
 #hdrForwardButton .toolbarbutton-icon {
 	list-style-image: none !important;
-	/* kill theme icon */
 	mask-image: url("Icons/forward.svg") !important;
 	mask-repeat: no-repeat !important;
 	mask-size: 16px 16px !important;
@@ -586,7 +581,6 @@ tr.card-layout.children span.subject {
 
 #hdrArchiveButton .toolbarbutton-icon {
 	list-style-image: none !important;
-	/* kill theme icon */
 	mask-image: url("Icons/archive.svg") !important;
 	mask-repeat: no-repeat !important;
 	mask-size: 16px 16px !important;
@@ -598,7 +592,6 @@ tr.card-layout.children span.subject {
 
 #hdrJunkButton .toolbarbutton-icon {
 	list-style-image: none !important;
-	/* kill theme icon */
 	mask-image: url("Icons/junk.svg") !important;
 	mask-repeat: no-repeat !important;
 	mask-size: 16px 16px !important;
@@ -610,7 +603,6 @@ tr.card-layout.children span.subject {
 
 #hdrTrashButton .toolbarbutton-icon {
 	list-style-image: none !important;
-	/* kill theme icon */
 	mask-image: url("Icons/trash.svg") !important;
 	mask-repeat: no-repeat !important;
 	mask-size: 16px 16px !important;
@@ -795,7 +787,6 @@ tr.card-layout.children span.subject {
 	height: 16px !important;
 }
 
-
 #placeholderNoMessages::before {
 	background-image: url("Icons/mail.svg") !important;
 }
@@ -808,10 +799,7 @@ tr.card-layout.children span.subject {
 	background-image: url("Icons/filter.svg") !important;
 }
 
-#threadPaneDisplayButton {
-	background-image: url("Icons/list.svg") !important;
-}
-
+/* FIX: Consolidated duplicated displayButton rules */
 #threadPaneDisplayButton,
 #displayButton {
 	background-image: url("Icons/list.svg") !important;
@@ -836,7 +824,6 @@ tr.card-layout.children span.subject {
 	fill: #4ade8000 !important;
 	stroke: #16a34a00 !important;
 	margin-left: 0 !important;
-	/* assuming _ was a placeholder */
 }
 
 tr.table-layout.selected.current {
@@ -848,6 +835,7 @@ tr.table-layout.selected.current {
 }
 
 @media (-moz-platform: windows) {
+
 	/* Make all titlebar buttons exactly 28px tall */
 	:root[customtitlebar] .titlebar-button,
 	:root[customtitlebar] #titlebar-min,
@@ -855,19 +843,18 @@ tr.table-layout.selected.current {
 	:root[customtitlebar] #titlebar-close {
 		height: 29px !important;
 	}
-	
+
 	/* Override the close button hover to use #c42b1c */
 	:root[customtitlebar] .titlebar-close:hover {
 		background-color: #c42b1cfa !important;
 		stroke: white !important;
 	}
 
-/* Replace the maximize icon with custom SVG */
+	/* Replace the maximize icon with custom SVG */
 	.titlebar-max {
 		-moz-default-appearance: -moz-window-button-maximize;
 		list-style-image: url("Titlebar_Icons/maximize-light.png") !important;
 		opacity: 0.9 !important;
-
 	}
 }
 
@@ -876,19 +863,22 @@ tr.table-layout.selected.current {
 	display: none !important;
 }
 
-/* Target cards with approximately 2-row height */
+/*Using inline [style*="height"] selectors is fragile. 
+  If a Thunderbird update slightly changes the row height (e.g., to 48px or 51px), 
+  this layout will break. If it breaks in the future, you may need to rely on 
+  native data attributes like [data-properties~="row"] or :root[uidensity] instead. 
+*/
 tr.card-layout[style*="height: 49px"] .sender,
 tr.card-layout[style*="height: 50px"] .sender {
-    font-size: 1rem !important;
-    font-weight: 500 !important;
-    margin-top: 5px !important;
+	font-size: 1rem !important;
+	font-weight: 500 !important;
+	margin-top: 5px !important;
 }
 
 /* Fix for more 3 dots icon */
 #otherActionsButton .toolbarbutton-icon {
 	display: none;
 }
-
 
 /* DARK MODE */
 @media (prefers-color-scheme: dark) {
@@ -900,14 +890,13 @@ tr.card-layout[style*="height: 50px"] .sender {
 			-moz-default-appearance: -moz-window-button-maximize;
 			list-style-image: url("Titlebar_Icons/maximize-dark.png") !important;
 			opacity: 0.9 !important;
-
 		}
 	}
 
 	#placeholderNoMessages::before {
-	background-image: url("Icons/mail-dark.svg") !important;
+		background-image: url("Icons/mail-dark.svg") !important;
 	}
-	
+
 	.toolbarbutton-1:hover {
 		background-color: #272727 !important;
 	}
@@ -919,13 +908,14 @@ tr.card-layout[style*="height: 50px"] .sender {
 
 	.notification-button .button-text,
 	.notification-button .button-icon {
-	  color: black !important;
-	  fill: black !important;  
-	  filter: none !important;    
-	  opacity: 1 !important;   
+		color: black !important;
+		fill: black !important;
+		filter: none !important;
+		opacity: 1 !important;
 	}
+
 	.notification-button.button-menu-list {
-	  stroke: #000 !important;
+		stroke: #000 !important;
 	}
 
 	:is(ul, ol)[role="tree"] li.selected.current>.container {
@@ -956,13 +946,13 @@ tr.card-layout[style*="height: 50px"] .sender {
 	#hdrReplyListButton .toolbarbutton-menubutton-dropmarker {
 		border-color: #1f1f1f !important;
 	}
-	
+
 	#hdrReplyListButton .toolbarbutton-menubutton-button,
 	#hdrReplyListButton .toolbarbutton-menubutton-dropmarker {
-	  border: 1px solid #1f1f1f !important;
-	  box-sizing: border-box !important;
+		border: 1px solid #1f1f1f !important;
+		box-sizing: border-box !important;
 	}
-	
+
 	.toolbarbutton-1 {
 		background-color: #3a3a3a !important;
 	}
@@ -983,13 +973,48 @@ tr.card-layout[style*="height: 50px"] .sender {
 		background-image: url("Icons/list-dark.svg") !important;
 	}
 
+	/* Windows 11 styled menu button */
+	#button-appmenu {
+		position: relative !important;
+		top: -12px !important;
+		border: none !important;
+		border-radius: 0px !important;
+		box-shadow: none !important;
+		height: 29px !important;
+		width: 46px !important;
+		background-color: transparent !important;
+
+	}
+
+	/* Hover color*/
+	#button-appmenu:hover {
+		background-color: rgba(255, 255, 255, 0.1) !important;
+		/* Koyu tema için uygun şeffaf beyaz */
+	}
+
+	/* Active color */
+	#button-appmenu:active {
+		background-color: rgba(255, 255, 255, 0.15) !important;
+	}
+
+	/* Rounded Popup */
+	menupopup,
+	panel {
+		--panel-border-radius: 8px !important;
+		--arrowpanel-border-radius: 8px !important;
+		--panel-padding: 4px !important;
+	}
+
+	menu,
+	menuitem {
+		border-radius: 4px !important;
+		margin: 1px 4px !important;
+	}
+
+	/* Hover mod */
+	menu:hover,
+	menuitem:hover {
+		background-color: rgba(136, 136, 136, 0.2) !important;
+	}
 
 }
-
-
-
-
-
-
-
-
